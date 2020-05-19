@@ -16,7 +16,7 @@ class WorldCup
   def all_players_by_position
     all_players = @teams.flat_map { |team| team.players }
 
-    all_players.group_by { |player| player.position }
+    players_by_position = all_players.group_by { |player| player.position }
 
     # all_players_by_position = {}
     #
